@@ -53,14 +53,15 @@ class FirebaseAPI: NSObject {
     }
     
     
-    func getIconImage(iconUrl: String?, completion: ((_ success:Bool, _ iconImage:UIImage?, _ message: String?) ->())?){
+    func getIconImage(iconUrl: String!, completion: ((_ success:Bool, _ iconImage:UIImage?, _ message: String?) ->())?){
         // Create a reference from a Google Cloud Storage URI
-        let filenameURL = getDocumentsDirectory().appendingPathComponent(iconUrl!)
+        let filenameURL : URL?
+        filenameURL = getDocumentsDirectory().appendingPathComponent(iconUrl!)
         if isIconImageSaveIntoLocalStorage(iconUrl: iconUrl!) {
-            completion?(true, UIImage(contentsOfFile: filenameURL.path)!, nil)
+            completion?(true, UIImage(contentsOfFile: (filenameURL?.path)!)!, nil)
         } else {
             let gsReference = storage.reference(forURL: Firebase.GoogleCloudStorageURI.appending(iconUrl!))
-            gsReference.write(toFile: filenameURL) { (url, error) in
+            gsReference.write(toFile: filenameURL!) { (url, error) in
                 if let error = error {
                     print("Error message: \(String(describing: error.localizedDescription))")
                     completion?(false, nil ,(error.localizedDescription))

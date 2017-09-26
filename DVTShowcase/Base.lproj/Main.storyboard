@@ -217,7 +217,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gWm-sY-Q0U">
-                                <rect key="frame" x="7" y="64" width="361" height="667"/>
+                                <rect key="frame" x="7" y="0.0" width="361" height="667"/>
                                 <color key="backgroundColor" red="0.98020301870748294" green="0.981000212585034" blue="0.97921981292517002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
@@ -226,13 +226,16 @@
                             <constraint firstItem="gWm-sY-Q0U" firstAttribute="centerX" secondItem="diD-rd-tVM" secondAttribute="centerX" id="QHi-oW-VsE"/>
                             <constraint firstItem="gWm-sY-Q0U" firstAttribute="width" secondItem="diD-rd-tVM" secondAttribute="width" placeholder="YES" id="SCO-mS-faA"/>
                             <constraint firstItem="gWm-sY-Q0U" firstAttribute="height" secondItem="diD-rd-tVM" secondAttribute="height" id="aut-OL-yZR"/>
-                            <constraint firstItem="gWm-sY-Q0U" firstAttribute="top" secondItem="hAR-Lb-72e" secondAttribute="bottom" id="ofn-vo-xyb"/>
+                            <constraint firstItem="gWm-sY-Q0U" firstAttribute="top" secondItem="diD-rd-tVM" secondAttribute="top" id="bKp-P0-gW6"/>
+                            <constraint firstItem="gWm-sY-Q0U" firstAttribute="top" secondItem="hAR-Lb-72e" secondAttribute="bottom" placeholder="YES" id="ofn-vo-xyb"/>
                             <constraint firstAttribute="trailing" secondItem="gWm-sY-Q0U" secondAttribute="trailing" constant="7" id="qSa-8Y-a5L"/>
+                            <constraint firstAttribute="bottom" secondItem="gWm-sY-Q0U" secondAttribute="bottom" id="rB5-UL-CIf"/>
                             <constraint firstItem="gWm-sY-Q0U" firstAttribute="leading" secondItem="diD-rd-tVM" secondAttribute="leading" constant="7" id="x0k-7x-52t"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="SCO-mS-faA"/>
+                                <exclude reference="ofn-vo-xyb"/>
                             </mask>
                         </variation>
                     </view>

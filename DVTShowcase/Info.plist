@@ -45,6 +45,8 @@
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>fb</string>
+		<string>twitter</string>
 		<string>citymapper</string>
 		<string>comgooglemaps</string>
 		<string>navigon</string>

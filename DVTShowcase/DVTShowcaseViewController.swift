@@ -134,6 +134,28 @@ class DVTShowcaseViewController: UIViewController, MFMailComposeViewControllerDe
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func openWebsite(withUrl: String) {
+        UIApplication.shared.open(NSURL(string: withUrl)! as URL, options: [:], completionHandler: nil)
+    }
+    
+    func openDVTFacebook() {
+        let facebookURL = NSURL(string: "fb://profile/837222129729578")!
+        if UIApplication.shared.canOpenURL(facebookURL as URL) {
+            UIApplication.shared.open(facebookURL as URL, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.open(NSURL(string: "https://www.facebook.com/DVTSoftware")! as URL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    func openDVTTwitter() {
+        let twitterURL = NSURL(string: "twitter:///user?screen_name=DVT_Corporate")!
+        if UIApplication.shared.canOpenURL(twitterURL as URL) {
+            UIApplication.shared.open(twitterURL as URL, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.open(NSURL(string: "https://twitter.com/DVT_Corporate")! as URL, options: [:], completionHandler: nil)
+        }
+    }
+    
     func showLoading(view: UIView) {
         KVSpinnerView.show(on: self.view)
     }

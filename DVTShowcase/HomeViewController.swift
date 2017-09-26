@@ -20,11 +20,11 @@ class HomeViewController: DVTShowcaseViewController, UITableViewDelegate, UITabl
         let narBArImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
         narBArImageView.image = UIImage(named: "dvt_icon")
         self.navigationItem.title = "DVT App Showcase"
-        self.showcaseAppTableView.delegate = self
-        self.showcaseAppTableView.dataSource = self
-        self.showcaseAppTableView.rowHeight = UITableViewAutomaticDimension
-        self.showcaseAppTableView.estimatedRowHeight = 130
-        self.showcaseAppTableView.register(UINib.init(nibName: "ShowcaseAppTableViewCell", bundle: nil), forCellReuseIdentifier: "CellIdentifier")
+        self.showcaseAppTableView?.delegate = self
+        self.showcaseAppTableView?.dataSource = self
+        self.showcaseAppTableView?.rowHeight = UITableViewAutomaticDimension
+        self.showcaseAppTableView?.estimatedRowHeight = 130
+        self.showcaseAppTableView?.register(UINib.init(nibName: "ShowcaseAppTableViewCell", bundle: nil), forCellReuseIdentifier: "ShowcaseAppCellIdentifier")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,7 +38,7 @@ class HomeViewController: DVTShowcaseViewController, UITableViewDelegate, UITabl
             if success {
                 self.showcaseAppArray = showcaseAppArray
                 DispatchQueue.main.async(execute: { () -> Void in
-                    self.showcaseAppTableView.reloadData()
+                    self.showcaseAppTableView?.reloadData()
 //                    self.hideLoading()
                 })
             } else {
@@ -59,17 +59,21 @@ class HomeViewController: DVTShowcaseViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath) as! ShowcaseAppTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ShowcaseAppCellIdentifier", for: indexPath) as! ShowcaseAppTableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         let showcaseApps = showcaseAppArray[indexPath.section]
         cell.appNameLabel.text = showcaseApps["name"] as? String
         cell.clientNameLabel.text = showcaseApps["client"] as? String
         cell.shortDescriptionLabel.text = showcaseApps["shortDescription"] as? String
-        firebaseApi.getIconImage(iconUrl: showcaseApps["iconUrl"] as? String!) { (success, image, message) in
-            if success {
-                cell.appIconImageView.image = image
+        
+        if ((showcaseApps["iconUrl"] as? String!) != nil) {
+            firebaseApi.getIconImage(iconUrl: showcaseApps["iconUrl"] as? String!) { (success, image, message) in
+                if success {
+                    cell.appIconImageView.image = image
+                }
             }
         }
+        
         return cell;
     }
     

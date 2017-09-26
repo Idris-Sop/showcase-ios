@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="336"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="336"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="335.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_background" translatesAutoresizingMaskIntoConstraints="NO" id="9PS-hh-1Po">
@@ -48,7 +48,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4V-R9-uPO">
-                        <rect key="frame" x="38" y="301" width="44" height="32"/>
+                        <rect key="frame" x="37" y="301" width="46" height="32"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                         <state key="normal" title="EMAIL">
                             <color key="titleColor" red="0.0" green="0.41176470588235292" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
@@ -59,7 +60,8 @@
                         <state key="normal" image="email"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37p-YH-Qga">
-                        <rect key="frame" x="142" y="301" width="37" height="30"/>
+                        <rect key="frame" x="141.5" y="301" width="38" height="30"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                         <state key="normal" title="CALL">
                             <color key="titleColor" red="0.0" green="0.41176470590000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
@@ -70,7 +72,8 @@
                         <state key="normal" image="phone"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCX-qW-3JS">
-                        <rect key="frame" x="225" y="301" width="71" height="30"/>
+                        <rect key="frame" x="223.5" y="301" width="74" height="30"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                         <state key="normal" title="NAVIGATE">
                             <color key="titleColor" red="0.0" green="0.41176470590000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>

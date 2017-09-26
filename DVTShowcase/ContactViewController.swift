@@ -9,19 +9,20 @@
 import UIKit
 
 class ContactViewController: DVTShowcaseViewController , UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var contactTableView: UITableView!
+    @IBOutlet weak var contactTableView: UITableView?
 
+    
     var dvtContactArray = [[String: AnyObject?]]()
     let firebaseApi = FirebaseAPI.sharedFirebaseAPI
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Contact"
-        self.contactTableView.delegate = self
-        self.contactTableView.dataSource = self
-        self.contactTableView.rowHeight = UITableViewAutomaticDimension
-        self.contactTableView.estimatedRowHeight = 120
-        self.contactTableView.register(UINib.init(nibName: "AboutTableViewCell", bundle: nil), forCellReuseIdentifier: "CellIdentifier")
+        self.contactTableView?.delegate = self
+        self.contactTableView?.dataSource = self
+        self.contactTableView?.rowHeight = UITableViewAutomaticDimension
+        self.contactTableView?.estimatedRowHeight = 120
+        self.contactTableView?.register(UINib.init(nibName: "ContactTableViewCell", bundle: nil), forCellReuseIdentifier: "ContactCellIdentifier")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,7 +36,7 @@ class ContactViewController: DVTShowcaseViewController , UITableViewDelegate, UI
             if success {
                 self.dvtContactArray = dvtContactArray
                 DispatchQueue.main.async(execute: { () -> Void in
-                    self.contactTableView.reloadData()
+                    self.contactTableView?.reloadData()
 //                    self.hideLoading()
                 })
             } else {
