@@ -10,6 +10,7 @@ import UIKit
 
 class DVTApp: NSObject {
 
+    var appId: String?
     var client: String?
     var appName: String?
     var shortDescription: String?
@@ -18,4 +19,6 @@ class DVTApp: NSObject {
     var technologyUsed: String?
     var iconUrl: String?
     var longDescription: String?
+    var screenShots: [String]?
+
 }

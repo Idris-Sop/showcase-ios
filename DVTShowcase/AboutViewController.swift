@@ -10,7 +10,6 @@ import UIKit
 
 class AboutViewController: DVTShowcaseViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var aboutTableView: UITableView?
-    private var aboutView: AboutView?
 
     private let aboutDVT = "DVT or Dynamic Visual Technologies was founded in 1999. It has grown to over 600 staff with offices in South Africa (Johannesburg, Centurion, Cape Town and Durban) and the United Kingdom (London). We service more than 100 local nd international, medium and large organisations and build long-tem partnerships with our clients."
     
@@ -18,6 +17,8 @@ class AboutViewController: DVTShowcaseViewController, UITableViewDelegate, UITab
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationItem.title = "About"
+        self.navigationController?.navigationBar.barTintColor = DVTShowcaseColor.blueColor
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
         self.aboutTableView?.delegate = self
         self.aboutTableView?.dataSource = self
         self.aboutTableView?.rowHeight = UITableViewAutomaticDimension
@@ -35,10 +36,7 @@ class AboutViewController: DVTShowcaseViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AboutCellIdentifier", for: indexPath) as! AboutTableViewCell
-        cell.layer.cornerRadius = 2.0
-        cell.layer.borderWidth = 0.5
-        cell.layer.borderColor = UIColor.lightGray.cgColor
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        
 
         cell.aboutLabel.text = self.aboutDVT
         cell.websiteButton.addTarget(self, action: #selector(openWebsitePressed(sender:)), for: .touchUpInside)

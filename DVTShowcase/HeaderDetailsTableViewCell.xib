@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="170" id="KGk-i7-Jjw" customClass="HeaderDetailsTableViewCell" customModule="DVTShowcase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgj-W2-oit">
+                        <rect key="frame" x="108" y="49.5" width="249" height="21.5"/>
+                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="16"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short Description " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aba-QN-RoR">
+                        <rect key="frame" x="108" y="76" width="249" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" placeholder="YES" id="13p-H9-KMP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="13p-H9-KMP"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_background" translatesAutoresizingMaskIntoConstraints="NO" id="smB-jS-kJT">
+                        <rect key="frame" x="18" y="18" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="LXc-5U-vZu"/>
+                            <constraint firstAttribute="width" constant="80" id="SdH-MZ-fky"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1P-XR-7y4">
+                        <rect key="frame" x="108" y="18" width="249" height="25.5"/>
+                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="19"/>
+                        <color key="textColor" red="0.015686274510000001" green="0.015686274510000001" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogF-OM-Io5">
+                        <rect key="frame" x="267" y="106" width="90" height="35"/>
+                        <color key="backgroundColor" red="0.0" green="0.41176470590000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="3CU-Pl-lMy"/>
+                            <constraint firstAttribute="width" constant="90" id="iXz-KU-9oj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="16"/>
+                        <state key="normal" title="INSTALL"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.96306335030000001" green="0.96479060370000003" blue="0.96598639450000001" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="Kgj-W2-oit" firstAttribute="leading" secondItem="c1P-XR-7y4" secondAttribute="leading" id="1MQ-UR-iYr"/>
+                    <constraint firstItem="aba-QN-RoR" firstAttribute="trailing" secondItem="c1P-XR-7y4" secondAttribute="trailing" id="6tx-aS-0p3"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ogF-OM-Io5" secondAttribute="bottom" priority="250" constant="5" id="Edb-Rj-fzX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="c1P-XR-7y4" secondAttribute="trailing" constant="10" id="Fno-sH-Q10"/>
+                    <constraint firstItem="Kgj-W2-oit" firstAttribute="trailing" secondItem="c1P-XR-7y4" secondAttribute="trailing" id="FvJ-WD-J32"/>
+                    <constraint firstItem="c1P-XR-7y4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" placeholder="YES" id="GQl-kr-IZV"/>
+                    <constraint firstItem="aba-QN-RoR" firstAttribute="leading" secondItem="Kgj-W2-oit" secondAttribute="leading" id="IUc-87-6YN"/>
+                    <constraint firstItem="c1P-XR-7y4" firstAttribute="top" secondItem="smB-jS-kJT" secondAttribute="top" id="K55-5y-Nv9"/>
+                    <constraint firstItem="Kgj-W2-oit" firstAttribute="top" secondItem="c1P-XR-7y4" secondAttribute="bottom" constant="6" id="KDx-A4-nXw"/>
+                    <constraint firstItem="ogF-OM-Io5" firstAttribute="top" secondItem="aba-QN-RoR" secondAttribute="bottom" constant="10" id="Rat-83-GY0"/>
+                    <constraint firstItem="ogF-OM-Io5" firstAttribute="top" secondItem="aba-QN-RoR" secondAttribute="bottom" constant="8" placeholder="YES" id="TzC-D5-dq3"/>
+                    <constraint firstItem="c1P-XR-7y4" firstAttribute="leading" secondItem="smB-jS-kJT" secondAttribute="trailing" constant="10" id="ceV-c3-QGh"/>
+                    <constraint firstItem="smB-jS-kJT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="gDM-Ln-wlt"/>
+                    <constraint firstItem="smB-jS-kJT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="puL-Hy-e6P"/>
+                    <constraint firstItem="ogF-OM-Io5" firstAttribute="trailing" secondItem="aba-QN-RoR" secondAttribute="trailing" id="tdQ-eA-Mzc"/>
+                    <constraint firstItem="aba-QN-RoR" firstAttribute="top" secondItem="Kgj-W2-oit" secondAttribute="bottom" constant="5" id="zmQ-0K-SgO"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="GQl-kr-IZV"/>
+                        <exclude reference="TzC-D5-dq3"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="appIconImageView" destination="smB-jS-kJT" id="75l-dL-kBY"/>
+                <outlet property="appNameLabel" destination="c1P-XR-7y4" id="gWM-J3-XYR"/>
+                <outlet property="clientNameLabel" destination="Kgj-W2-oit" id="sIO-39-j71"/>
+                <outlet property="installButton" destination="ogF-OM-Io5" id="ePv-dN-Qdb"/>
+                <outlet property="shortDescriptionLabel" destination="aba-QN-RoR" id="DsC-0u-Ljx"/>
+            </connections>
+            <point key="canvasLocation" x="61.5" y="117"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="empty_background" width="300" height="300"/>
+    </resources>
+</document>

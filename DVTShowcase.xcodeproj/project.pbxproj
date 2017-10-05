@@ -26,8 +26,6 @@
 		D64395701F755D410085F3F3 /* CMMapLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = D643956F1F755D410085F3F3 /* CMMapLauncher.m */; };
 		D64395781F7A52BA0085F3F3 /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64395761F7A52BA0085F3F3 /* AboutTableViewCell.swift */; };
 		D64395791F7A52BA0085F3F3 /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64395771F7A52BA0085F3F3 /* AboutTableViewCell.xib */; };
-		D643957B1F7A5A160085F3F3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D643957A1F7A5A160085F3F3 /* AboutView.swift */; };
-		D643957D1F7A5A200085F3F3 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D643957C1F7A5A200085F3F3 /* AboutView.xib */; };
 		D64C4E871F728DE500C90F51 /* DVTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C4E861F728DE500C90F51 /* DVTApp.swift */; };
 		D64C4E8B1F72A42000C90F51 /* ShowcaseAppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C4E891F72A42000C90F51 /* ShowcaseAppTableViewCell.swift */; };
 		D64C4E8C1F72A42000C90F51 /* ShowcaseAppTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64C4E8A1F72A42000C90F51 /* ShowcaseAppTableViewCell.xib */; };
@@ -36,6 +34,16 @@
 		D67FFF9D1F6FD2710063449C /* DVTShowcaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67FFF9C1F6FD2710063449C /* DVTShowcaseViewController.swift */; };
 		D67FFFA01F6FD2B00063449C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67FFF9F1F6FD2B00063449C /* LoginViewController.swift */; };
 		D6A629F31F6FF7590070994C /* DVTShowcaseColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A629F21F6FF7580070994C /* DVTShowcaseColor.swift */; };
+		D6E3E5541F7E3EDC00DF0DA2 /* HeaderDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E3E5521F7E3EDC00DF0DA2 /* HeaderDetailsTableViewCell.swift */; };
+		D6E3E5551F7E3EDC00DF0DA2 /* HeaderDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E3E5531F7E3EDC00DF0DA2 /* HeaderDetailsTableViewCell.xib */; };
+		D6E3E5581F7E409B00DF0DA2 /* AppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E3E5561F7E409B00DF0DA2 /* AppDetailsViewController.swift */; };
+		D6E3E5591F7E409B00DF0DA2 /* AppDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E3E5571F7E409B00DF0DA2 /* AppDetailsViewController.xib */; };
+		D6E3E55C1F82882300DF0DA2 /* FunctionalityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E3E55A1F82882300DF0DA2 /* FunctionalityTableViewCell.swift */; };
+		D6E3E55D1F82882300DF0DA2 /* FunctionalityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E3E55B1F82882300DF0DA2 /* FunctionalityTableViewCell.xib */; };
+		D6E3E5601F8391F300DF0DA2 /* ScreenshotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E3E55E1F8391F300DF0DA2 /* ScreenshotsTableViewCell.swift */; };
+		D6E3E5611F8391F300DF0DA2 /* ScreenshotsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E3E55F1F8391F300DF0DA2 /* ScreenshotsTableViewCell.xib */; };
+		D6E3E5641F84BBC500DF0DA2 /* ScreenShotsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E3E5621F84BBC500DF0DA2 /* ScreenShotsCollectionViewCell.swift */; };
+		D6E3E5651F84BBC500DF0DA2 /* ScreenShotsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E3E5631F84BBC500DF0DA2 /* ScreenShotsCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,8 +90,6 @@
 		D643956F1F755D410085F3F3 /* CMMapLauncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMapLauncher.m; sourceTree = "<group>"; };
 		D64395761F7A52BA0085F3F3 /* AboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
 		D64395771F7A52BA0085F3F3 /* AboutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
-		D643957A1F7A5A160085F3F3 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		D643957C1F7A5A200085F3F3 /* AboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
 		D64C4E861F728DE500C90F51 /* DVTApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVTApp.swift; sourceTree = "<group>"; };
 		D64C4E891F72A42000C90F51 /* ShowcaseAppTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowcaseAppTableViewCell.swift; sourceTree = "<group>"; };
 		D64C4E8A1F72A42000C90F51 /* ShowcaseAppTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowcaseAppTableViewCell.xib; sourceTree = "<group>"; };
@@ -92,6 +98,16 @@
 		D67FFF9C1F6FD2710063449C /* DVTShowcaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVTShowcaseViewController.swift; sourceTree = "<group>"; };
 		D67FFF9F1F6FD2B00063449C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D6A629F21F6FF7580070994C /* DVTShowcaseColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVTShowcaseColor.swift; sourceTree = SOURCE_ROOT; };
+		D6E3E5521F7E3EDC00DF0DA2 /* HeaderDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		D6E3E5531F7E3EDC00DF0DA2 /* HeaderDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		D6E3E5561F7E409B00DF0DA2 /* AppDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailsViewController.swift; sourceTree = "<group>"; };
+		D6E3E5571F7E409B00DF0DA2 /* AppDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppDetailsViewController.xib; sourceTree = "<group>"; };
+		D6E3E55A1F82882300DF0DA2 /* FunctionalityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalityTableViewCell.swift; sourceTree = "<group>"; };
+		D6E3E55B1F82882300DF0DA2 /* FunctionalityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunctionalityTableViewCell.xib; sourceTree = "<group>"; };
+		D6E3E55E1F8391F300DF0DA2 /* ScreenshotsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotsTableViewCell.swift; sourceTree = "<group>"; };
+		D6E3E55F1F8391F300DF0DA2 /* ScreenshotsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenshotsTableViewCell.xib; sourceTree = "<group>"; };
+		D6E3E5621F84BBC500DF0DA2 /* ScreenShotsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShotsCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6E3E5631F84BBC500DF0DA2 /* ScreenShotsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenShotsCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				D61E929B1F71441400B60518 /* HomeViewController.swift */,
+				D6E3E5561F7E409B00DF0DA2 /* AppDetailsViewController.swift */,
+				D6E3E5571F7E409B00DF0DA2 /* AppDetailsViewController.xib */,
 			);
 			name = "Home View Controllers";
 			sourceTree = "<group>";
@@ -280,8 +298,14 @@
 				D64C4E8E1F753CBA00C90F51 /* ContactTableViewCell.xib */,
 				D64395761F7A52BA0085F3F3 /* AboutTableViewCell.swift */,
 				D64395771F7A52BA0085F3F3 /* AboutTableViewCell.xib */,
-				D643957A1F7A5A160085F3F3 /* AboutView.swift */,
-				D643957C1F7A5A200085F3F3 /* AboutView.xib */,
+				D6E3E5521F7E3EDC00DF0DA2 /* HeaderDetailsTableViewCell.swift */,
+				D6E3E5531F7E3EDC00DF0DA2 /* HeaderDetailsTableViewCell.xib */,
+				D6E3E55A1F82882300DF0DA2 /* FunctionalityTableViewCell.swift */,
+				D6E3E55B1F82882300DF0DA2 /* FunctionalityTableViewCell.xib */,
+				D6E3E55E1F8391F300DF0DA2 /* ScreenshotsTableViewCell.swift */,
+				D6E3E55F1F8391F300DF0DA2 /* ScreenshotsTableViewCell.xib */,
+				D6E3E5621F84BBC500DF0DA2 /* ScreenShotsCollectionViewCell.swift */,
+				D6E3E5631F84BBC500DF0DA2 /* ScreenShotsCollectionViewCell.xib */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -414,11 +438,15 @@
 			files = (
 				3464468934A8B041FABD76D0 /* Info.plist in Resources */,
 				34644E7CB40618446ECCC134 /* Assets.xcassets in Resources */,
-				D643957D1F7A5A200085F3F3 /* AboutView.xib in Resources */,
 				D64C4E901F753CBA00C90F51 /* ContactTableViewCell.xib in Resources */,
+				D6E3E5611F8391F300DF0DA2 /* ScreenshotsTableViewCell.xib in Resources */,
 				3464475677FFE33378AD3B08 /* LaunchScreen.storyboard in Resources */,
+				D6E3E5591F7E409B00DF0DA2 /* AppDetailsViewController.xib in Resources */,
 				3464448E8F8AC41D78838095 /* Main.storyboard in Resources */,
+				D6E3E55D1F82882300DF0DA2 /* FunctionalityTableViewCell.xib in Resources */,
 				D64395791F7A52BA0085F3F3 /* AboutTableViewCell.xib in Resources */,
+				D6E3E5651F84BBC500DF0DA2 /* ScreenShotsCollectionViewCell.xib in Resources */,
+				D6E3E5551F7E3EDC00DF0DA2 /* HeaderDetailsTableViewCell.xib in Resources */,
 				D64C4E8C1F72A42000C90F51 /* ShowcaseAppTableViewCell.xib in Resources */,
 				D61E92901F71282500B60518 /* GoogleService-Info.plist in Resources */,
 			);
@@ -507,14 +535,18 @@
 				D64395781F7A52BA0085F3F3 /* AboutTableViewCell.swift in Sources */,
 				D61E92941F7129D200B60518 /* FirebaseAPI.swift in Sources */,
 				D67FFFA01F6FD2B00063449C /* LoginViewController.swift in Sources */,
-				D643957B1F7A5A160085F3F3 /* AboutView.swift in Sources */,
 				D67FFF9D1F6FD2710063449C /* DVTShowcaseViewController.swift in Sources */,
 				D64395701F755D410085F3F3 /* CMMapLauncher.m in Sources */,
 				34644A8D9CFF624DF7DA8791 /* AppDelegate.swift in Sources */,
 				D64C4E871F728DE500C90F51 /* DVTApp.swift in Sources */,
+				D6E3E5581F7E409B00DF0DA2 /* AppDetailsViewController.swift in Sources */,
 				D6A629F31F6FF7590070994C /* DVTShowcaseColor.swift in Sources */,
+				D6E3E5541F7E3EDC00DF0DA2 /* HeaderDetailsTableViewCell.swift in Sources */,
 				D64C4E8B1F72A42000C90F51 /* ShowcaseAppTableViewCell.swift in Sources */,
+				D6E3E5601F8391F300DF0DA2 /* ScreenshotsTableViewCell.swift in Sources */,
+				D6E3E5641F84BBC500DF0DA2 /* ScreenShotsCollectionViewCell.swift in Sources */,
 				D61E92A01F71443100B60518 /* ContactViewController.swift in Sources */,
+				D6E3E55C1F82882300DF0DA2 /* FunctionalityTableViewCell.swift in Sources */,
 				D61E929C1F71441400B60518 /* HomeViewController.swift in Sources */,
 				D61E929E1F71442300B60518 /* AboutViewController.swift in Sources */,
 				D61E92961F71415300B60518 /* DVTShowcaseTabController.swift in Sources */,

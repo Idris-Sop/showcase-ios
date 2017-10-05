@@ -39,15 +39,27 @@ class FirebaseAPI: NSObject {
         }
     }
     
-    func getShowcaseApp(completion: ((_ success:Bool, _ showcaseAppArray:[[String: AnyObject]], _ message: String?) ->())?) {
+    func getShowcaseApp(completion: ((_ success:Bool, _ showcaseAppArray:[AnyObject?], _ message: String?) ->())?) {
         ref = Database.database().reference()
-        var showcaseAppArray = [[String: AnyObject]]()
+        var showcaseAppArray = [AnyObject?]()
         databaseHandle = ref?.child("apps").observe(.childAdded, with: { (snapshot) in
-            let value = snapshot.value as? [String : AnyObject]
-            showcaseAppArray.append(value!)
+            let values = snapshot.value as? [String : AnyObject]
+            
+            let dvtApp = DVTApp()
+            dvtApp.functionality = values?["functionality"] as? String
+            dvtApp.iconUrl = values?["iconUrl"] as? String
+            dvtApp.client = values?["client"] as? String
+            dvtApp.appName = values?["name"] as? String
+            dvtApp.industry = values?["industry"] as? String
+            dvtApp.shortDescription = values?["shortDescription"] as? String
+            dvtApp.technologyUsed = values?["technologyUsed"] as? String
+            dvtApp.longDescription = values?["longDescription"] as? String
+            dvtApp.appId = values?["id"] as? String
+            dvtApp.screenShots = values?["screenshots"] as? Array
+            showcaseAppArray.append(dvtApp)
             completion?(true, showcaseAppArray, nil)
         }, withCancel: { (error) in
-            let showcaseAppArry = [[String: AnyObject]]()
+            let showcaseAppArry = [AnyObject]()
             completion?(false, showcaseAppArry ,(error.localizedDescription))
         })
     }

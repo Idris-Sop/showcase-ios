@@ -12,7 +12,7 @@ import UIKit
 class HomeViewController: DVTShowcaseViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var showcaseAppTableView: UITableView!
 
-    var showcaseAppArray = [[String: AnyObject?]]()
+    var showcaseAppArray = [AnyObject?]()
     let firebaseApi = FirebaseAPI.sharedFirebaseAPI
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class HomeViewController: DVTShowcaseViewController, UITableViewDelegate, UITabl
         self.showcaseAppTableView?.delegate = self
         self.showcaseAppTableView?.dataSource = self
         self.showcaseAppTableView?.rowHeight = UITableViewAutomaticDimension
-        self.showcaseAppTableView?.estimatedRowHeight = 130
+        self.showcaseAppTableView?.estimatedRowHeight = 110
         self.showcaseAppTableView?.register(UINib.init(nibName: "ShowcaseAppTableViewCell", bundle: nil), forCellReuseIdentifier: "ShowcaseAppCellIdentifier")
     }
     
@@ -34,6 +34,8 @@ class HomeViewController: DVTShowcaseViewController, UITableViewDelegate, UITabl
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.default
         firebaseApi.getShowcaseApp { (success, showcaseAppArray, message) in
             if success {
                 self.showcaseAppArray = showcaseAppArray
@@ -60,14 +62,14 @@ class HomeViewController: DVTShowcaseViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShowcaseAppCellIdentifier", for: indexPath) as! ShowcaseAppTableViewCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
-        let showcaseApps = showcaseAppArray[indexPath.section]
-        cell.appNameLabel.text = showcaseApps["name"] as? String
-        cell.clientNameLabel.text = showcaseApps["client"] as? String
-        cell.shortDescriptionLabel.text = showcaseApps["shortDescription"] as? String
+
+        let showcaseApps = showcaseAppArray[indexPath.section] as? DVTApp
+        cell.appNameLabel.text = showcaseApps?.appName
+        cell.clientNameLabel.text = showcaseApps?.client
+        cell.shortDescriptionLabel.text = showcaseApps?.shortDescription
         
-        if ((showcaseApps["iconUrl"] as? String!) != nil) {
-            firebaseApi.getIconImage(iconUrl: showcaseApps["iconUrl"] as? String!) { (success, image, message) in
+        if ((showcaseApps?.iconUrl) != nil) {
+            firebaseApi.getIconImage(iconUrl: showcaseApps?.iconUrl) { (success, image, message) in
                 if success {
                     cell.appIconImageView.image = image
                 }
@@ -78,21 +80,27 @@ class HomeViewController: DVTShowcaseViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 8
     }
     
-    func heightForText(text: String) -> CGFloat {
-        let MAX_HEIGHT = 20000
-        let textView = UITextView(frame: CGRect(x: 0, y: 0, width: 320, height: MAX_HEIGHT))
-        textView.text = text
-        textView.font = UIFont.boldSystemFont(ofSize: 17)
-        textView.sizeToFit()
-        return textView.frame.size.height
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedShowcaseApps = showcaseAppArray[indexPath.section] as? DVTApp
+        let appDetailsViewController = AppDetailsViewController(nibName: "AppDetailsViewController", bundle: Bundle.main)
+        appDetailsViewController.setSelectedDVTApp(dvtApp: selectedShowcaseApps!)
+        let appDetailsNavigationController = UINavigationController(rootViewController: appDetailsViewController)
+        appDetailsNavigationController.navigationBar.barTintColor = DVTShowcaseColor.blueColor
+        self.present(appDetailsNavigationController, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(appDetailsViewController, animated: true)
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

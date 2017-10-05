@@ -18,6 +18,8 @@ class ContactViewController: DVTShowcaseViewController , UITableViewDelegate, UI
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Contact"
+        self.navigationController?.navigationBar.barTintColor = DVTShowcaseColor.blueColor
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
         self.contactTableView?.delegate = self
         self.contactTableView?.dataSource = self
         self.contactTableView?.rowHeight = UITableViewAutomaticDimension
@@ -57,11 +59,8 @@ class ContactViewController: DVTShowcaseViewController , UITableViewDelegate, UI
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath) as! ContactTableViewCell
-        cell.layer.cornerRadius = 2.0
-        cell.layer.borderWidth = 0.5
-        cell.layer.borderColor = UIColor.lightGray.cgColor
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCellIdentifier", for: indexPath) as! ContactTableViewCell
+
         let dvtContact = dvtContactArray[indexPath.section]
         cell.cityNameLabel.text = dvtContact["name"] as? String
         cell.cityAddressLabel.text = dvtContact["address"] as? String
